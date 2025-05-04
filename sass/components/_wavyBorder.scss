@@ -1,0 +1,23 @@
+.wavy-border-main {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  box-sizing: border-box;
+
+  svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 6.3rem;
+    transform: rotateY(180deg);
+    margin-top: -0.2rem;
+    box-sizing: border-box;
+  }
+  .shape-fill {
+    fill: $color-black-dark;
+  }
+}

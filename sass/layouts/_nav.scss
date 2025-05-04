@@ -1,0 +1,108 @@
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  transition: all 0.4s;
+  @include respond(nav-btn) {
+    position: absolute;
+  }
+  @include respond(big-desktop) {
+    width: 60%;
+  }
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 20rem;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-animation: navigation 0.7s cubic-bezier(0.33, 1, 0.68, 1) 0.2s
+      backwards;
+    animation: navigation 0.7s cubic-bezier(0.33, 1, 0.68, 1) 0.2s backwards;
+
+    @include respond(nav-btn) {
+      padding: 6.2rem 5rem 5rem;
+    }
+    &__img-section {
+      width: 10rem;
+      @include respond(phone) {
+        width: 11rem;
+      }
+    }
+
+    &__img {
+      display: block;
+      width: 100%;
+    }
+    &__links {
+      @include respond(nav-btn) {
+        display: none;
+      }
+    }
+
+    &__link:link,
+    &__link:visited {
+      text-decoration: none;
+      color: $color-white;
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      border-bottom: 0.3rem solid transparent;
+      padding-bottom: 1rem;
+      transition: all 0.25s ease-in;
+      &:hover {
+        @include nav-link-hover;
+        border-color: $color-white;
+        @include respond(tab-land) {
+          border-color: $color-black-dark;
+        }
+      }
+      &:not(:last-child) {
+        margin-right: 3rem;
+
+        @include respond(tab-land) {
+          margin-right: 2rem;
+          color: $color-black-dark;
+        }
+      }
+
+      &:last-child {
+        border: 2px solid $color-white;
+        padding: 0.3rem 1.2rem;
+        border-radius: 1.4rem;
+        &:hover {
+          background-color: $color-white;
+          color: $color-black-dark;
+        }
+        @include respond(tab-land) {
+          border-color: $color-black-dark;
+          color: $color-black-dark;
+
+          &:hover {
+            background-color: $color-black-dark;
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+}
+.scroll-nav-black {
+  background: rgba(48, 48, 48, 0.9);
+  box-shadow: 0 0.4rem 3rem rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.scroll-nav-white {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0.4rem 3rem rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+// #scroll-marker {
+//   position: absolute;
+//   top: 5rem;
+// }

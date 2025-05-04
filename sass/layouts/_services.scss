@@ -1,0 +1,87 @@
+.projects-section {
+  background-color: $color-black-dark;
+  padding: 12rem 20rem;
+  margin-top: -1rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+
+  @include respond(tab-port) {
+    padding: 10rem 15rem;
+  }
+  @include respond(phone) {
+    padding: 6rem 3rem 5rem;
+  }
+  &__title {
+    margin-bottom: $margin-bottom-medium;
+    text-transform: uppercase;
+    font-size: $font-size-h2;
+    color: $color-white;
+    margin-bottom: $margin-bottom-super-big;
+    background-image: linear-gradient(
+      45deg,
+      $color-green-light,
+      $color-green-dark
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    @include respond(phone) {
+      text-align: center;
+      margin-bottom: $margin-bottom-big;
+    }
+  }
+
+  .swiper {
+    width: 100%;
+    margin-bottom: 6rem;
+    &-wrapper-slider {
+      padding-bottom: 6rem;
+    }
+    &-projects {
+      overflow: hidden;
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 37rem;
+      height: 37rem;
+      border-radius: 1.5rem;
+      padding: 5rem;
+      @include respond(tab-land) {
+        width: 35rem;
+        height: 35rem;
+        padding: 2rem 3rem;
+      }
+      @include respond(phone) {
+        width: 30rem;
+        height: 30rem;
+        padding: 2rem 3rem;
+      }
+      @include respond(minPhone) {
+        width: 27rem;
+        height: 27rem;
+        padding: 2rem 2rem;
+      }
+    }
+
+    &-pagination {
+      &-bullet {
+        width: 1.4rem;
+        height: 1.4rem;
+        background-color: $color-white;
+        border-radius: 50%;
+        transition: all 0.4s ease-in-out;
+        &-active {
+          width: 3.2rem;
+          background-color: rgb(255, 78, 136);
+          border-radius: 1.4rem;
+        }
+      }
+    }
+  }
+}

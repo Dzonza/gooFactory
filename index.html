@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sass/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>gooFactory</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="scripts/main.js" defer type="module"></script>
+  </head>
+  <body>
+    <div id="scroll-marker"></div>
+    <header>
+      <nav class="navigation">
+        <section class="navigation__img-section">
+          <img
+            src="./assets/VJN_Crni_Transparent.png"
+            alt="vjn solutions logo"
+            class="navigation__img"
+          />
+        </section>
+        <section class="navigation__links">
+          <a href="#" class="navigation__link navigation__link1">Home</a
+          ><a href="#about" class="navigation__link navigation__link2">About</a
+          ><a href="#services" class="navigation__link navigation__link3"
+            >Services</a
+          ><a href="#contact" class="navigation__link navigation__link4"
+            >Contact</a
+          >
+        </section>
+      </nav>
+      <section class="navigation-btn">
+        <input
+          type="checkbox"
+          class="navigation-btn__checkbox"
+          id="navi-toggle"
+        />
+        <label for="navi-toggle" class="navigation-btn__button"
+          ><span class="navigation-btn__icon">&nbsp;</span>
+        </label>
+        <a href="#" class="navigation-btn__home-btn burger-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="20"
+            height="20"
+            viewBox="0 0 48 48"
+            fill=" #fff"
+          >
+            <path
+              d="M 23.951172 4 A 1.50015 1.50015 0 0 0 23.072266 4.3222656 L 8.859375 15.519531 C 7.0554772 16.941163 6 19.113506 6 21.410156 L 6 40.5 C 6 41.863594 7.1364058 43 8.5 43 L 18.5 43 C 19.863594 43 21 41.863594 21 40.5 L 21 30.5 C 21 30.204955 21.204955 30 21.5 30 L 26.5 30 C 26.795045 30 27 30.204955 27 30.5 L 27 40.5 C 27 41.863594 28.136406 43 29.5 43 L 39.5 43 C 40.863594 43 42 41.863594 42 40.5 L 42 21.410156 C 42 19.113506 40.944523 16.941163 39.140625 15.519531 L 24.927734 4.3222656 A 1.50015 1.50015 0 0 0 23.951172 4 z M 24 7.4101562 L 37.285156 17.876953 C 38.369258 18.731322 39 20.030807 39 21.410156 L 39 40 L 30 40 L 30 30.5 C 30 28.585045 28.414955 27 26.5 27 L 21.5 27 C 19.585045 27 18 28.585045 18 30.5 L 18 40 L 9 40 L 9 21.410156 C 9 20.030807 9.6307412 18.731322 10.714844 17.876953 L 24 7.4101562 z"
+            ></path>
+          </svg>
+        </a>
+        <a href="#about" class="navigation-btn__about-btn burger-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="20"
+            height="20"
+            viewBox="0 0 48 48"
+            fill=" #fff"
+          >
+            <path
+              d="M 24 4 C 12.972292 4 4 12.972292 4 24 C 4 27.275316 4.8627078 30.334853 6.2617188 33.064453 L 4.09375 40.828125 C 3.5887973 42.631528 5.3719261 44.41261 7.1757812 43.908203 L 14.943359 41.740234 C 17.671046 43.137358 20.726959 44 24 44 C 35.027708 44 44 35.027708 44 24 C 44 12.972292 35.027708 4 24 4 z M 24 7 C 33.406292 7 41 14.593708 41 24 C 41 33.406292 33.406292 41 24 41 C 20.997029 41 18.192258 40.218281 15.744141 38.853516 A 1.50015 1.50015 0 0 0 14.609375 38.71875 L 7.2226562 40.78125 L 9.2851562 33.398438 A 1.50015 1.50015 0 0 0 9.1503906 32.263672 C 7.7836522 29.813476 7 27.004518 7 24 C 7 14.593708 14.593708 7 24 7 z M 23.976562 12.978516 A 1.50015 1.50015 0 0 0 22.5 14.5 L 22.5 26.5 A 1.50015 1.50015 0 1 0 25.5 26.5 L 25.5 14.5 A 1.50015 1.50015 0 0 0 23.976562 12.978516 z M 24 31 A 2 2 0 0 0 24 35 A 2 2 0 0 0 24 31 z"
+            ></path>
+          </svg>
+        </a>
+        <a href="#services" class="navigation-btn__services-btn burger-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="20"
+            height="20"
+            viewBox="0 0 48 48"
+            fill="#fff"
+          >
+            <path
+              d="M 34 4.0019531 C 33.1465 4.0019531 32.293734 4.1054531 31.427734 4.3144531 C 30.805734 4.4634531 30.345203 4.9929063 30.283203 5.6289062 L 30.242188 6.0507812 C 30.195187 6.5317812 29.919 6.9630781 29.5 7.2050781 C 29.081 7.4460781 28.568859 7.4734844 28.130859 7.2714844 L 27.742188 7.0957031 C 27.163187 6.8327031 26.473203 6.9637344 26.033203 7.4277344 C 24.835203 8.6877344 23.941125 10.228813 23.453125 11.882812 C 23.271125 12.495812 23.500484 13.155344 24.021484 13.527344 L 24.371094 13.777344 C 24.764094 14.060344 25 14.517 25 15 C 25 15.483 24.765047 15.938703 24.373047 16.220703 L 24.021484 16.472656 C 23.989484 16.495656 23.969453 16.527734 23.939453 16.552734 L 24.011719 17.027344 C 24.058719 17.333344 24.230047 17.587188 24.498047 17.742188 C 24.653047 17.831187 24.826047 17.878906 24.998047 17.878906 C 25.120047 17.878906 25.242281 17.854641 25.363281 17.806641 L 27.083984 17.134766 C 27.490984 16.976766 27.917516 16.896484 28.353516 16.896484 C 29.397516 16.896484 30.379922 17.357203 31.044922 18.158203 C 32.275922 19.638203 33.241109 21.305234 33.912109 23.115234 C 34.269109 24.079234 34.171031 25.118422 33.707031 25.982422 C 33.805031 25.985422 33.904 26 34 26 C 34.842 26 35.708219 25.894547 36.574219 25.685547 C 37.195219 25.536547 37.654797 25.009047 37.716797 24.373047 L 37.757812 23.949219 C 37.804812 23.468219 38.081 23.036922 38.5 22.794922 C 38.92 22.554922 39.432141 22.528516 39.869141 22.728516 L 40.257812 22.90625 C 40.836813 23.17125 41.527797 23.039219 41.966797 22.574219 C 43.164797 21.314219 44.058875 19.773141 44.546875 18.119141 C 44.728875 17.504141 44.499516 16.843656 43.978516 16.472656 L 43.628906 16.222656 C 43.235906 15.939656 43 15.483 43 15 C 43 14.517 43.234953 14.061297 43.626953 13.779297 L 43.978516 13.527344 C 44.499516 13.156344 44.728875 12.496813 44.546875 11.882812 C 44.058875 10.228813 43.164797 8.6877344 41.966797 7.4277344 C 41.526797 6.9627344 40.835813 6.8307031 40.257812 7.0957031 L 39.871094 7.2714844 C 39.429094 7.4714844 38.918 7.4440781 38.5 7.2050781 C 38.081 6.9630781 37.804813 6.5327344 37.757812 6.0527344 L 37.716797 5.6289062 C 37.654797 4.9919063 37.194266 4.4634531 36.572266 4.3144531 C 35.706266 4.1054531 34.8535 4.0019531 34 4.0019531 z M 34 12 C 35.657 12 37 13.343 37 15 C 37 16.657 35.657 18 34 18 C 32.343 18 31 16.657 31 15 C 31 13.343 32.343 12 34 12 z M 17.902344 13.996094 C 17.094719 13.998594 16.31975 14.080922 15.46875 14.232422 C 14.83575 14.343422 14.343094 14.846422 14.246094 15.482422 L 13.964844 17.328125 C 13.827844 18.233125 13.294 19.015609 12.5 19.474609 C 11.708 19.932609 10.763203 20.006875 9.9082031 19.671875 L 8.1855469 18.998047 C 7.5845469 18.765047 6.8993281 18.938547 6.4863281 19.435547 C 5.4023281 20.739547 4.5519375 22.2115 3.9609375 23.8125 C 3.7369375 24.4185 3.9266406 25.099906 4.4316406 25.503906 L 5.875 26.658203 C 6.59 27.229203 7 28.083 7 29 C 7 29.917 6.59 30.770797 5.875 31.341797 L 4.4316406 32.496094 C 3.9266406 32.900094 3.7379375 33.5815 3.9609375 34.1875 C 4.5529375 35.7885 5.4023281 37.260453 6.4863281 38.564453 C 6.8993281 39.061453 7.5865469 39.237953 8.1855469 39.001953 L 9.9082031 38.328125 C 10.762203 37.994125 11.708 38.068391 12.5 38.525391 C 13.294 38.984391 13.828797 39.765875 13.966797 40.671875 L 14.246094 42.517578 C 14.343094 43.153578 14.83575 43.656578 15.46875 43.767578 C 16.34575 43.924578 17.173 44 18 44 C 18.827 44 19.65425 43.925531 20.53125 43.769531 C 21.16425 43.658531 21.656906 43.153578 21.753906 42.517578 L 22.033203 40.671875 L 22.035156 40.671875 C 22.172156 39.766875 22.706 38.984391 23.5 38.525391 C 24.294 38.068391 25.238797 37.996078 26.091797 38.330078 L 27.814453 39.003906 C 28.415453 39.237906 29.100672 39.061453 29.513672 38.564453 C 30.597672 37.260453 31.448063 35.790453 32.039062 34.189453 C 32.263062 33.582453 32.073359 32.900094 31.568359 32.496094 L 30.125 31.341797 C 29.41 30.770797 29 29.917 29 29 C 29 28.083 29.410953 27.22825 30.126953 26.65625 L 31.568359 25.503906 C 32.073359 25.100906 32.261109 24.416547 32.037109 23.810547 C 31.445109 22.214547 30.594812 20.7445 29.507812 19.4375 C 29.094812 18.9405 28.408594 18.765047 27.808594 18.998047 L 26.091797 19.669922 C 25.238797 20.004922 24.294 19.932609 23.5 19.474609 C 22.706 19.015609 22.171203 18.234125 22.033203 17.328125 L 21.753906 15.490234 C 21.656906 14.851234 21.161391 14.347281 20.525391 14.238281 C 19.549891 14.070781 18.709969 13.993594 17.902344 13.996094 z M 18 24 C 20.761 24 23 26.239 23 29 C 23 31.761 20.761 34 18 34 C 15.239 34 13 31.761 13 29 C 13 26.239 15.239 24 18 24 z"
+            ></path>
+          </svg>
+        </a>
+        <a href="#contact" class="navigation-btn__contact-btn burger-btn">
+          <svg
+            data-name="1-Email"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 32 32"
+            width="20"
+            height="20"
+            fill="#fff"
+          >
+            <path
+              d="M29 4H3a3 3 0 0 0-3 3v18a3 3 0 0 0 3 3h26a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-.72 2L16 14.77 3.72 6zM30 25a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.23l13.42 9.58a1 1 0 0 0 1.16 0L30 7.23z"
+            />
+          </svg>
+        </a>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+          <defs>
+            <filter id="shadowed-goo">
+              <feGaussianBlur
+                in="SourceGraphic"
+                result="blur"
+                stdDeviation="10"
+              />
+              <feColorMatrix
+                in="blur"
+                mode="matrix"
+                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                result="goo"
+              />
+              <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+              <feColorMatrix
+                in="shadow"
+                mode="matrix"
+                values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2"
+                result="shadow"
+              />
+              <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+              <feBlend in2="shadow" in="goo" result="goo" />
+              <feBlend in2="goo" in="SourceGraphic" result="mix" />
+            </filter>
+            <filter id="goo">
+              <feGaussianBlur
+                in="SourceGraphic"
+                result="blur"
+                stdDeviation="10"
+              />
+              <feColorMatrix
+                in="blur"
+                mode="matrix"
+                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                result="goo"
+              />
+              <feBlend in2="goo" in="SourceGraphic" result="mix" />
+            </filter>
+          </defs>
+        </svg>
+      </section>
+    </header>
+
+    <main>
+      <section class="main-section">
+        <article class="main-section__main-article">
+          <h1 class="main-section__main-title">We</h1>
+          <div class="main-section__text-animation">
+            <span id="text1"></span>
+            <span id="text2"></span>
+            <svg id="filters">
+              <defs>
+                <filter id="threshold">
+                  <feColorMatrix
+                    in="SourceGraphic"
+                    type="matrix"
+                    values="1 0 0 0 0
+                            0 1 0 0 0
+                            0 0 1 0 0
+                            0 0 0 255 -140"
+                  />
+                </filter>
+              </defs>
+            </svg>
+          </div>
+        </article>
+        <article class="main-section__blob-container">
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="goo">
+                <feGaussianBlur
+                  in="SourceGraphic"
+                  stdDeviation="10"
+                  result="blur"
+                />
+                <feColorMatrix
+                  in="blur"
+                  mode="matrix"
+                  values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                  result="goo"
+                />
+                <feBlend in="SourceGraphic" in2="goo" />
+              </filter>
+            </defs>
+          </svg>
+          <div
+            class="main-section__blob1 animate-blob"
+            data-animation="rotateBlob1"
+          ></div>
+          <div
+            class="main-section__blob2 animate-blob"
+            data-animation="rotateBlob2"
+          ></div>
+          <div
+            class="main-section__blob3 animate-blob"
+            data-animation="rotateBlob3"
+          ></div>
+          <div
+            class="main-section__blob4 animate-blob"
+            data-animation="rotateBlob4"
+          ></div>
+          <div class="main-section__blob5 animate-blob"></div>
+        </article>
+        <div class="wavy-border-main">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+      </section>
+      <section class="about-section" id="about">
+        <article class="about-section__about-us">
+          <h2>2. About Us</h2>
+          <section
+            class="about-section__danilo hidden"
+            data-animation="show-about"
+          >
+            <h3 class="about-section__names">John Doe</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
+              molestiae labore nostrum unde consequatur libero enim et eos natus
+              blanditiis facilis aut ducimus ullam minima, ab dicta fugit quod
+              deleniti.
+            </p>
+          </section>
+
+          <section
+            class="about-section__milos hidden"
+            data-animation="show-about"
+          >
+            <h3 class="about-section__names">James Newman</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+              nemo neque itaque quod blanditiis, sit repellat, ratione quaerat
+              veritatis voluptas dolorem inventore veniam, sint cupiditate
+              repellendus necessitatibus quas esse pariatur.
+            </p>
+          </section>
+          <section
+            class="about-section__nikola hidden"
+            data-animation="show-about"
+          >
+            <h3 class="about-section__names">Bob Botson</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi
+              reiciendis ducimus non sunt! Odio, provident id. Necessitatibus
+              suscipit veniam maiores! Quibusdam numquam itaque maxime enim
+              ducimus molestiae in illum.
+            </p>
+          </section>
+        </article>
+        <article class="about-section__logo-bubble">
+          <div class="about-section__square about-section__vjn">
+            <span
+              class="about-section__about-blob1 animate-blob"
+              data-animation="square-blob1"
+            ></span>
+            <span
+              class="about-section__about-blob2 animate-blob"
+              data-animation="square-blob2"
+            ></span>
+            <span
+              class="about-section__about-blob3 animate-blob"
+              data-animation="square-blob3"
+            ></span>
+            <div class="about-section__content about-section__vjn">
+              <img
+                src="./assets/VJN_Beli_Transparent.png"
+                alt="vjn solutions logo"
+              />
+            </div>
+          </div>
+        </article>
+        <article class="about-section__about-vjn">
+          <h2>1. gooFactory</h2>
+          <p
+            class="about-section__about-vjn-text vjn-hidden"
+            data-animation="show-about"
+          >
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit
+            cum harum vero nihil, incidunt iste debitis. Voluptates numquam
+            nihil ad quisquam consequatur ipsam hic dolorem tempora. Ratione
+            placeat doloribus cumque! Dolorum, aspernatur veritatis itaque quis,
+            rem quo ratione quas recusandae magni vel velit blanditiis a cumque!
+            Voluptatum magni quae vel optio voluptas asperiores voluptates nobis
+            autem ullam repellat. Ut, rem! Debitis tempore porro, numquam qui
+            eligendi minima in voluptate. Harum quod repellat veritatis hic,
+            inventore dolorum officia natus, commodi repudiandae pariatur
+            nostrum quis ipsam possimus maiores exercitationem et debitis dolor.
+          </p>
+        </article>
+      </section>
+      <section class="projects-section" id="services">
+        <h2 class="projects-section__title">3. Services</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper swiper-wrapper-slider">
+            <div class="swiper-slide slider-color1 swiper-projects">
+              <div class="swiper-slide__img-box">
+                <div class="swiper-img">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide slide-img">
+                      <img src="./assets/books.jpg" alt="" />
+                    </div>
+                    <div class="swiper-slide slide-img">
+                      <img src="./assets/robson.jpg" alt="" />
+                    </div>
+                    <div class="swiper-slide slide-img">
+                      <img src="assets/read.jpg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="swiper-slide__slider-title">Project 1</h3>
+              <p class="swiper-slide__slider-info">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+                sed cumque, maxime dolorem atque reprehenderit accusantium error
+              </p>
+              <div class="swiper-slide__tech-stack"></div>
+              <a class="swiper-slide__slider-button">Demo</a>
+            </div>
+            <div class="swiper-slide slider-color2 swiper-projects">
+              <div class="swiper-slide__img-box">
+                <div class="swiper-img">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide slide-img">
+                      <img src="./assets/books.jpg" alt="" />
+                    </div>
+                    <div class="swiper-slide slide-img">
+                      <img src="./assets/robson.jpg" alt="" />
+                    </div>
+                    <div class="swiper-slide slide-img">
+                      <img src="assets/read.jpg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="swiper-slide__slider-title">Project 2</h3>
+              <p class="swiper-slide__slider-info">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+                sed cumque, maxime dolorem atque reprehenderit accusantium error
+              </p>
+              <div class="swiper-slide__tech-stack"></div>
+              <a class="swiper-slide__slider-button">Demo</a>
+            </div>
+
+            <div class="swiper-slide slider-color3 swiper-projects">
+              <div class="swiper-slide__img-box">
+                <div class="swiper-img">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide slide-img">
+                      <img src="./assets/books.jpg" alt="" />
+                    </div>
+                    <div class="swiper-slide slide-img">
+                      <img src="./assets/robson.jpg" alt="" />
+                    </div>
+                    <div class="swiper-slide slide-img">
+                      <img src="assets/read.jpg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="swiper-slide__slider-title">Project 3</h3>
+              <p class="swiper-slide__slider-info">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+                sed cumque, maxime dolorem atque reprehenderit accusantium error
+              </p>
+              <div class="swiper-slide__tech-stack"></div>
+              <a class="swiper-slide__slider-button">Demo</a>
+            </div>
+            <div class="swiper-slide slider-color4 swiper-projects">
+              <div class="swiper-slide__img-box">
+                <div class="swiper-img">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide slide-img">
+                      <img src="./assets/books.jpg" alt="" />
+                    </div>
+                    <div class="swiper-slide slide-img">
+                      <img src="./assets/robson.jpg" alt="" />
+                    </div>
+                    <div class="swiper-slide slide-img">
+                      <img src="assets/read.jpg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="swiper-slide__slider-title">Project 4</h3>
+              <p class="swiper-slide__slider-info">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+                sed cumque, maxime dolorem atque reprehenderit accusantium error
+              </p>
+              <div class="swiper-slide__tech-stack">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 48 48"
+                  class="svg-icon"
+                >
+                  <polygon
+                    fill="#81c784"
+                    points="23.987,17 18.734,8 2.974,8 23.987,44 45,8 29.24,8"
+                  ></polygon>
+                  <polygon
+                    fill="#455a64"
+                    points="29.24,8 23.987,17 18.734,8 11.146,8 23.987,30 36.828,8"
+                  ></polygon>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 48 48"
+                  class="svg-icon"
+                >
+                  <path
+                    fill="#00acc1"
+                    d="M24,9.604c-6.4,0-10.4,3.199-12,9.597c2.4-3.199,5.2-4.398,8.4-3.599 c1.826,0.456,3.131,1.781,4.576,3.247C27.328,21.236,30.051,24,36,24c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.6 c-1.825-0.456-3.13-1.781-4.575-3.247C32.672,12.367,29.948,9.604,24,9.604L24,9.604z M12,24c-6.4,0-10.4,3.199-12,9.598 c2.4-3.199,5.2-4.399,8.4-3.599c1.825,0.457,3.13,1.781,4.575,3.246c2.353,2.388,5.077,5.152,11.025,5.152 c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.599c-1.826-0.456-3.131-1.781-4.576-3.246C20.672,26.764,17.949,24,12,24 L12,24z"
+                  ></path>
+                </svg>
+              </div>
+              <a class="swiper-slide__slider-button">Demo</a>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <section class="form-section" id="contact">
+        <h2 class="form-section__title">4. Contact</h2>
+        <p class="form-section__text-tab-port">Don't be shy, Hit us up! 👇</p>
+        <div class="form-section__container">
+          <form
+            action=""
+            class="form-section__form-for-request move-left-form"
+            data-animation="form-left"
+          >
+            <input
+              type="text"
+              placeholder="Full Name"
+              class="form-section__bg-black"
+            />
+
+            <input type="email" placeholder="Email" />
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="8"
+              class="form-section__message"
+            ></textarea>
+
+            <button class="form-section__btn">Send</button>
+          </form>
+
+          <div
+            class="form-section__text-container move-right-text"
+            data-animation="form-right"
+          >
+            <p class="form-section__text">
+              Don't be shy<br />Hit us up!<br /><span
+                class="hidden-pointer animate-emoji"
+                data-animation="animate-pointer-emoji"
+                >👈</span
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer-section">
+      <section class="footer-section__navigation-menu">
+        <a href="#" class="footer-section__footer-link">Home</a>
+        <a href="#about" class="footer-section__footer-link">About</a>
+        <a href="#services" class="footer-section__footer-link">Services</a>
+        <a href="#contact" class="footer-section__footer-link">Contact</a>
+      </section>
+      <section class="footer-section__section-img">
+        <img
+          src="./assets/VJN_Beli_Transparent.png"
+          alt="vjn solutions logo"
+          class="footer-section__img"
+        />
+      </section>
+      <p class="footer-section__text">
+        &copy; <span class="current-year"></span>
+        <span class="footer-section__company-name">vjnSolutions</span>. All
+        rights are reserved.
+      </p>
+    </footer>
+  </body>
+</html>
