@@ -396,7 +396,7 @@ header .navigation {
   }
 }
 header .navigation__img-section {
-  width: 10rem;
+  width: 16rem;
 }
 @media only screen and (max-width: 37.5em) {
   header .navigation__img-section {
@@ -784,14 +784,14 @@ header .navigation__link:link:last-child:hover, header .navigation__link:visited
 @media only screen and (max-width: 37.5em) {
   .projects-section .swiper-projects {
     width: 30rem;
-    height: 30rem;
+    height: 35rem;
     padding: 2rem 3rem;
   }
 }
 @media only screen and (max-width: 23.75em) {
   .projects-section .swiper-projects {
     width: 27rem;
-    height: 27rem;
+    height: 30rem;
     padding: 2rem 2rem;
   }
 }
@@ -808,11 +808,24 @@ header .navigation__link:link:last-child:hover, header .navigation__link:visited
   border-radius: 1.4rem;
 }
 
+.nested-swiper-pagination {
+  position: absolute;
+  text-align: center;
+  z-index: 100;
+}
+.nested-swiper-pagination .swiper-pagination-bullet {
+  width: 1.2rem !important;
+  height: 1.2rem !important;
+}
+.nested-swiper-pagination .swiper-pagination-bullet-active {
+  width: 2.8rem !important;
+}
+
 .footer-section {
   padding: 5rem 20rem;
   display: flex;
   flex-direction: column;
-  row-gap: 6rem;
+  row-gap: 4rem;
   justify-content: center;
   align-items: center;
   background-color: rgb(39, 39, 39);
@@ -1051,6 +1064,7 @@ header .navigation__link:link:last-child:hover, header .navigation__link:visited
   filter: blur(1.5px) brightness(75%);
 }
 .swiper-slide__img-box {
+  position: relative;
   width: 100%;
   height: 18rem;
   overflow: hidden;
@@ -1179,19 +1193,12 @@ header .navigation__link:link:last-child:hover, header .navigation__link:visited
   filter: none;
 }
 
-.swiper-img {
-  width: 100%;
-  height: 100%;
-}
 .swiper-img .slide-img {
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
   overflow: hidden;
 }
 .swiper-img .slide-img img {
-  width: 100%;
-  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .wavy-border-main {

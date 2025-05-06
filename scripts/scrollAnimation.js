@@ -81,15 +81,15 @@ function handleScroll() {
     if (window.innerWidth >= 1250) {
       headerNav.classList.add('scroll-nav-black');
       headerNav.classList.remove('scroll-nav-white');
-      logoImg.src = './assets/VJN_Beli_Transparent.png';
+      logoImg.src = 'assets/gooFactoryLogo-white.png';
     } else if (window.innerWidth > 800) {
       headerNav.classList.add('scroll-nav-white');
       headerNav.classList.remove('scroll-nav-black');
-      logoImg.src = './assets/VJN_Crni_Transparent.png';
+      logoImg.src = 'assets/gooFactoryLogo-black.png';
     }
   } else {
     headerNav.classList.remove('scroll-nav-black', 'scroll-nav-white');
-    logoImg.src = './assets/VJN_Crni_Transparent.png';
+    logoImg.src = 'assets/gooFactoryLogo-black.png';
   }
 }
 
